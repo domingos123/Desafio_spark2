@@ -38,8 +38,7 @@ object first {
         val df_1 = sc.textFile("C:/Users/domin/ideaProjects/untitled/src/main/data/googleplaystore_user_reviews.csv")
 
         val items_rating = df_3.map(ol => ol.split(",")(2)).filter(ox => ox != "3" != "2" != "1" != "0" )
-        //items_rating.write.csv("")
-        //items_rating.sortBy(k => -k)
-        println(items)
+        items_rating.sortBy(k => -k)
+        println(df_3)
     }
 }
